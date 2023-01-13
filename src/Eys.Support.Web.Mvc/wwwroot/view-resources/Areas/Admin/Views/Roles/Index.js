@@ -105,8 +105,7 @@
 
         e.preventDefault();
         abp.ajax({
-            url: abp.appPath + 'view-resources/Areas/Admin/Views/FormTables/_CreateOrUpdate.js/Roles/EditModal?roleId=' + roleId,
-            url: abp.appPath + '/Areas/Admin/Roles/EditModal?roleId=' + roleId,
+            url: abp.appPath + 'Admin/Roles/EditModal?roleId=' + roleId, 
             type: 'POST',
             dataType: 'html',
             success: function (content) {
