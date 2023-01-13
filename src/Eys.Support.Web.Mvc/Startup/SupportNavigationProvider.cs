@@ -48,8 +48,8 @@ namespace Eys.Support.Web.Startup
                 ).AddItem(
                     new MenuItemDefinition(
                         PageNames.Roles,
-                        L("Admin/Roles"),
-                        url: "Roles",
+                        L("Roles"),
+                        url: "Admin/Roles",
                         icon: "fas fa-theater-masks",
                         permissionDependency: new SimplePermissionDependency(PermissionNames.Pages_Roles)
                     )
