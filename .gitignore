@@ -254,3 +254,4 @@ paket-files/
 src/Eys.Support.Web.Mvc/secrets.json
 src/Eys.Support.Web.Host/secrets.json
 src/Eys.Support.Migrator/secrets.json
+/src/Eys.Support.Web.Mvc/App_Data
