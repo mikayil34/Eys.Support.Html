@@ -43,10 +43,7 @@
     <PackageReference Include="Abp.RedisCache" Version="7.3.0" />
     <PackageReference Include="Abp.Castle.Log4Net" Version="7.3.0" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\Views\" />
+  <ItemGroup> 
     <Folder Include="wwwroot\libs\" />
     <Folder Include="wwwroot\view-resources\Views\_Bundles\" />
   </ItemGroup>

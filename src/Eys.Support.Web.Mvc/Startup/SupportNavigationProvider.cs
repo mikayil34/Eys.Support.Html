@@ -33,7 +33,7 @@ namespace Eys.Support.Web.Startup
                     new MenuItemDefinition(
                         PageNames.Tenants,
                         L("Tenants"),
-                        url: "Tenants",
+                        url: "Admin/Tenants",
                         icon: "fas fa-building",
                         permissionDependency: new SimplePermissionDependency(PermissionNames.Pages_Tenants)
                     )
@@ -41,14 +41,14 @@ namespace Eys.Support.Web.Startup
                     new MenuItemDefinition(
                         PageNames.Users,
                         L("Users"),
-                        url: "Users",
+                        url: "Admin/Users",
                         icon: "fas fa-users",
                         permissionDependency: new SimplePermissionDependency(PermissionNames.Pages_Users)
                     )
                 ).AddItem(
                     new MenuItemDefinition(
                         PageNames.Roles,
-                        L("Roles"),
+                        L("Admin/Roles"),
                         url: "Roles",
                         icon: "fas fa-theater-masks",
                         permissionDependency: new SimplePermissionDependency(PermissionNames.Pages_Roles)

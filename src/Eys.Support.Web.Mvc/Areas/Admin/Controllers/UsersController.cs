@@ -7,8 +7,9 @@ using Eys.Support.Controllers;
 using Eys.Support.Users;
 using Eys.Support.Web.Models.Users;
 
-namespace Eys.Support.Web.Controllers
+namespace Eys.Support.Web.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     [AbpMvcAuthorize(PermissionNames.Pages_Users)]
     public class UsersController : SupportControllerBase
     {

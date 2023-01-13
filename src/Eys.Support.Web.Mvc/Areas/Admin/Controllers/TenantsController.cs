@@ -6,8 +6,9 @@ using Eys.Support.Authorization;
 using Eys.Support.Controllers;
 using Eys.Support.MultiTenancy;
 
-namespace Eys.Support.Web.Controllers
+namespace Eys.Support.Web.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     [AbpMvcAuthorize(PermissionNames.Pages_Tenants)]
     public class TenantsController : SupportControllerBase
     {
