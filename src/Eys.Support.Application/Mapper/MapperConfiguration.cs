@@ -4,6 +4,8 @@ using AutoMapper;
 using Eys.Support.Roles.Dto;
 using Eys.Support.Authorization.Roles;
 using System.Linq;
+using Eys.Support.Authorization.Users;
+using Eys.Support.Users.Dto;
 
 namespace Eys.Support.Mapper
 {
@@ -21,7 +23,7 @@ namespace Eys.Support.Mapper
         public static void ConfigureMapper(IMapperConfigurationExpression config)
         {
             ConfigureRolMap(config);
-            ConfigureModuleMap(config);
+            ConfigureUserMap(config);
             
         }
 
@@ -42,10 +44,15 @@ namespace Eys.Support.Mapper
             configuration.CreateMap<Permission, FlatPermissionDto>();
         }
 
-        private static void ConfigureModuleMap(IMapperConfigurationExpression configuration)
+        private static void ConfigureUserMap(IMapperConfigurationExpression configuration)
         {
-            //configuration.CreateMap<ModuleDTO, Module>();
-            //configuration.CreateMap<Module, ModuleDTO>();
+            configuration.CreateMap<UserDto, User>();
+            configuration.CreateMap<UserDto, User>()
+                .ForMember(x => x.Roles, opt => opt.Ignore())
+                .ForMember(x => x.CreationTime, opt => opt.Ignore());
+
+            configuration.CreateMap<CreateUserDto, User>();
+            configuration.CreateMap<CreateUserDto, User>().ForMember(x => x.Roles, opt => opt.Ignore());
         }
          
     }
