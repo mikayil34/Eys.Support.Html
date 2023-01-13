@@ -2,6 +2,7 @@
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using Eys.Support.Authorization;
+using Eys.Support.Mapper;
 
 namespace Eys.Support
 {
@@ -13,6 +14,7 @@ namespace Eys.Support
         public override void PreInitialize()
         {
             Configuration.Authorization.Providers.Add<SupportAuthorizationProvider>();
+            Configuration.Modules.AbpAutoMapper().Configurators.Add(DtoMapperConfiguration.ConfigureMapper);
         }
 
         public override void Initialize()
