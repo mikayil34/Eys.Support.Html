@@ -14,4 +14,8 @@
   <ItemGroup>
     <ProjectReference Include="..\Eys.Support.Core\Eys.Support.Core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="OrderService\Dto\" />
+    <Folder Include="OrderService\Main\Dto\" />
+  </ItemGroup>
 </Project>

@@ -4,12 +4,15 @@ using Eys.Support.Authorization.Roles;
 using Eys.Support.Authorization.Users;
 using Eys.Support.MultiTenancy;
 using System;
+using Eys.Support.OrderTable;
 
 namespace Eys.Support.EntityFrameworkCore
 {
     public class SupportDbContext : AbpZeroDbContext<Tenant, Role, User, SupportDbContext>
     {
         /* Define a DbSet for each entity of the application */
+        
+        public virtual DbSet<Product> Products { get; set; }
         
         public SupportDbContext(DbContextOptions<SupportDbContext> options)
             : base(options)
